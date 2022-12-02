@@ -1,0 +1,9 @@
+.proper_width {
+  display: flex;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.some_margin {
+  margin-left: 20px;
+}
