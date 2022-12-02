@@ -1,4 +1,3 @@
-import { BrowserRouter, Routers, Router } from "react-router-dom";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import WeatherElement from "./components/WeatherElement";
