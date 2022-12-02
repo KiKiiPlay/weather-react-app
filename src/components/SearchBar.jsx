@@ -17,7 +17,7 @@ const SearchBar = () => {
           placeholder="Find your city here!"
           aria-label="Username"
           aria-describedby="inputGroup-sizing-sm"
-          value={searchCity}
+          // value={"test"}
           onChange={(e) => setSearchCity({ searchCity: e.target.value })}
         />
       </InputGroup>
@@ -25,7 +25,7 @@ const SearchBar = () => {
         className="some_margin"
         onClick={() => {
           dispatch({
-            type: "ADD_TO_CART",
+            type: "SEARCH_CITY",
             payload: searchCity,
           });
         }}
