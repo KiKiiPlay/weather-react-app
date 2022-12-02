@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const WeatherElement = () => {
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState("");
+  const [cityWeather, setWeather] = useState("");
 
   const fetchMovies = async () => {
     try {
@@ -12,7 +12,7 @@ const WeatherElement = () => {
       if (response.ok) {
         let data = await response.json();
         setCity({ city: data.name });
-        console.log(city);
+        setWeather({ cityWeather: data.weather });
       } else {
         this.setState({
           isLoading: false,
@@ -31,6 +31,9 @@ const WeatherElement = () => {
   useEffect(() => {
     fetchMovies();
   }, []);
+
+  console.log(city);
+  console.log(setWeather);
 
   return (
     <div className="mt-5">
