@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
+import { useSelector } from "react-redux";
 
 const WeatherElement = () => {
   const [city, setCity] = useState("");
   const [cityWeather, setWeather] = useState({});
   const [temp, setTemp] = useState("");
 
-  const cityName = "Moscow";
+  const cityFinal = useSelector((state) => state.searchedCity);
 
   const fetchMovies = async () => {
     try {
       let response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a8ae1a570a8b212bd9edeefb6887f890`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityFinal}&appid=a8ae1a570a8b212bd9edeefb6887f890`
       );
       if (response.ok) {
         let data = await response.json();
