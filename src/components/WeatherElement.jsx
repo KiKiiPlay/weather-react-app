@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import Card from "react-bootstrap/Card";
 
 const WeatherElement = () => {
   const [city, setCity] = useState("");
-  const [cityWeather, setWeather] = useState("");
+  const [cityWeather, setWeather] = useState({});
 
   const fetchMovies = async () => {
     try {
@@ -12,19 +13,12 @@ const WeatherElement = () => {
       if (response.ok) {
         let data = await response.json();
         setCity({ city: data.name });
-        setWeather({ cityWeather: data.weather });
+        setWeather(data.weather);
       } else {
-        this.setState({
-          isLoading: false,
-          ifError: true,
-        });
+        console.log("error");
       }
     } catch (error) {
       console.log(error);
-      this.setState({
-        isLoading: false,
-        ifError: true,
-      });
     }
   };
 
@@ -33,11 +27,17 @@ const WeatherElement = () => {
   }, []);
 
   console.log(city);
-  console.log(setWeather);
+  console.log(cityWeather);
 
   return (
     <div className="mt-5">
-      <h1>212121</h1>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <div>{city}</div>
+          </Card.Title>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
