@@ -18,7 +18,7 @@ const SearchBar = () => {
           aria-label="Username"
           aria-describedby="inputGroup-sizing-sm"
           // value={"test"}
-          onChange={(e) => setSearchCity({ searchCity: e.target.value })}
+          onChange={(e) => setSearchCity(e.target.value)}
         />
       </InputGroup>
       <Button
