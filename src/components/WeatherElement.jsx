@@ -29,7 +29,7 @@ const WeatherElement = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, []);
+  }, [cityFinal]);
 
   console.log(city);
   console.log(cityWeather);

@@ -1,6 +1,6 @@
 const initialState = {
   searchQuerry: {
-    searchedCity: "Kyiv",
+    searchedCity: "",
   },
 };
 
