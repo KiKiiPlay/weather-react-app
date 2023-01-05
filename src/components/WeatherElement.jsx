@@ -7,7 +7,7 @@ const WeatherElement = () => {
   const [cityWeather, setWeather] = useState({});
   const [temp, setTemp] = useState("");
 
-  const cityFinal = useSelector((state) => state.searchedCity);
+  const cityFinal = useSelector((state) => state.searchQuerry.searchedCity);
 
   const fetchMovies = async () => {
     try {

@@ -1,6 +1,6 @@
 const initialState = {
   searchQuerry: {
-    searchedCity: "",
+    searchedCity: "Kyiv",
   },
 };
 
@@ -8,10 +8,8 @@ const mainReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SEARCH_CITY":
       return {
-        ...state,
         searchQuerry: {
-          ...state.searchQuerry,
-          searchedCity: [...state.searchQuerry.searchedCity, action.payload],
+          searchedCity: action.payload,
         },
       };
 
