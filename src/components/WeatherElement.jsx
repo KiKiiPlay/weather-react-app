@@ -39,7 +39,6 @@ const WeatherElement = () => {
       <Card>
         <Card.Body>
           <Card.Title>{city}</Card.Title>
-          {/* <Card.Text>{cityWeather[0].description}</Card.Text> */}
           <Card.Text>{temp} ℉</Card.Text>
         </Card.Body>
       </Card>
