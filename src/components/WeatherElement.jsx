@@ -36,12 +36,25 @@ const WeatherElement = () => {
 
   return (
     <div className="mt-5">
-      <Card>
+      {/* <Card>
         <Card.Body>
           <Card.Title>{city}</Card.Title>
           <Card.Text>{temp} ℉</Card.Text>
         </Card.Body>
-      </Card>
+      </Card> */}
+      <div
+        className="container justify-content-center"
+        style={{ marginTop: "200px" }}
+      >
+        <div className="row">
+          <div className="col" style={{ fontSize: "50px", marginTop: "30px" }}>
+            {city}
+          </div>
+          <div className="col" style={{ fontSize: "90px" }}>
+            {temp} ℉
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

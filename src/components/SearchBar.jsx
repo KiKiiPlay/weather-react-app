@@ -11,7 +11,7 @@ const SearchBar = () => {
   const [searchCity, setSearchCity] = useState("");
 
   return (
-    <div className="proper_width">
+    <div className="proper_width" style={{ marginTop: "30px" }}>
       <InputGroup size="lg">
         <Form.Control
           placeholder="Find your city here!"
